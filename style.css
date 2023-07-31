@@ -1,0 +1,97 @@
+#container {
+    position: relative;
+    width: 100%;
+    height: 700px;
+  }
+  
+  #background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('pexels-marta-dzedyshko-2067569.jpg');
+    background-size: cover;
+  }
+  
+  #translucent-layer {
+    display:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Ajusta el nivel de transparencia cambiando el último valor (0.5) */
+  }
+  
+  #text-layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    width: 320px;
+    height: 350px;
+  }
+ #btn{
+    margin:15px;
+    background-color: crimson;
+    color:aliceblue;
+    border:none;
+    padding:6px 7px;
+    border-radius: 8px;
+ }
+ #btn:hover{
+    background-color: aliceblue;
+    color:crimson;
+ }
+#text-layer h1 {
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    transform: translate(-20%, -25%);
+    text-align: center;
+    }
+    
+  #mood{
+    margin: 0;
+    position: absolute;
+    top: 74%;
+    left: 55%;
+    transform: translate(-74%, -55%);
+    text-align: center;
+
+  } 
+  
+  @media (max-width: 768px) {
+    #container {
+      height: 100vh; /* Establece la altura del contenedor en el 100% del viewport (altura visible) */
+    }
+  
+    #background-image {
+      background-size: contain; /* Ajusta el tamaño de la imagen de fondo para que siempre quepa en el contenedor */
+    }
+  
+    #text-layer {
+      top: 40%; /* Ajusta la posición del elemento de texto para centrarse verticalmente */
+      width: 90%; /* Ajusta el ancho del elemento de texto */
+      height: auto; /* Permite que la altura del elemento se ajuste automáticamente al contenido */
+      transform: translate(-50%, 0); /* Ajusta la posición horizontal del elemento de texto */
+    }
+  
+    #text-layer h1 {
+      top: 10%; /* Ajusta la posición del encabezado para centrarse verticalmente */
+      left: 50%; /* Ajusta la posición horizontal del encabezado */
+      transform: translate(-50%, 0); /* Ajusta la posición vertical del encabezado */
+      font-size: 22px; /* Ajusta el tamaño de fuente del encabezado */
+    }
+  
+    #mood {
+      top: 70%; /* Ajusta la posición del elemento de estado de ánimo */
+      left: 50%; /* Ajusta la posición horizontal del elemento de estado de ánimo */
+      transform: translate(-50%, 0); /* Ajusta la posición vertical del elemento de estado de ánimo */
+    }
+  }
